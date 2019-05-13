@@ -19,9 +19,11 @@ df.to_csv('../../dataset/NLMR/NLMR_smelly_new.csv',index=False)
 df = pd.read_csv('../../dataset/LIC/LIC_smelly.csv')
 
 df['is_static'] = 'false'
+df['is_enum'] = 'false'
+df['uses_variables'] = 'false'
 df.rename(columns={'name': 'full_name'},inplace=True)
 print(df.head(3))
-columnsTitles = ['is_static','full_name']
+columnsTitles = ['is_static','is_enum','uses_variables','full_name']
 
 df = df.reindex(columns=columnsTitles)
 print(df.head(3))

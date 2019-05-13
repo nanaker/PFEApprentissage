@@ -45,7 +45,7 @@ clf = tree.DecisionTreeClassifier()
 
 lr_model = clf.fit(X, Y)
 
-file_name='models/model_LIC.pickle'
+file_name='../../models/model_LIC.pickle'
 p.dump(clf, open(file_name, 'wb'))
 
 
