@@ -29,7 +29,7 @@ datasetpath=["../../dataset/HBR/taken/HBR_.csv","../../dataset/HBR/taken/HBR_Ran
              ,"../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv"
              ]
 
-df = pd.read_csv(datasetpath[3])
+df = pd.read_csv(datasetpath[1])
 idx = np.random.permutation(df.index)
 df.reindex(idx)
 print(df['is_code_smell'].describe())

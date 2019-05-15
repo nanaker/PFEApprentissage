@@ -25,7 +25,7 @@ X = df.values
 rus = RandomUnderSampler(return_indices=True)
 X_resampled, y_resampled, idx_resampled = rus.fit_sample(X, Y)
 X_resampled = pd.DataFrame(X_resampled)
-X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface']
+X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class']
 y_resampled = pd.DataFrame(y_resampled)
 y_resampled.columns = ['is_code_smell']
 undersampled_data = pd.concat([X_resampled, y_resampled], axis=1)
@@ -39,7 +39,7 @@ undersampled_data.to_csv('../../dataset/LIC/LIC_RandomUnderSampler_default.csv',
 rus = RandomUnderSampler(return_indices=True,random_state=0)
 X_resampled, y_resampled, idx_resampled = rus.fit_sample(X, Y)
 X_resampled = pd.DataFrame(X_resampled)
-X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface']
+X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class']
 y_resampled = pd.DataFrame(y_resampled)
 y_resampled.columns = ['is_code_smell']
 undersampled_data = pd.concat([X_resampled, y_resampled], axis=1)
@@ -54,7 +54,7 @@ undersampled_data.to_csv('../../dataset/LIC/LIC_RandomUnderSampler.csv', index=F
 rus = AllKNN(return_indices=True)
 X_resampled, y_resampled, idx_resampled = rus.fit_sample(X, Y)
 X_resampled = pd.DataFrame(X_resampled)
-X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface']
+X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class']
 
 y_resampled = pd.DataFrame(y_resampled)
 y_resampled.columns = ['is_code_smell']
@@ -67,7 +67,7 @@ undersampled_data.to_csv('../../dataset/LIC/LIC_AllKNN.csv', index=False)
 rus = CondensedNearestNeighbour(return_indices=True)
 X_resampled, y_resampled, idx_resampled = rus.fit_sample(X, Y)
 X_resampled = pd.DataFrame(X_resampled)
-X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface']
+X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class']
 y_resampled = pd.DataFrame(y_resampled)
 y_resampled.columns = ['is_code_smell']
 undersampled_data = pd.concat([X_resampled, y_resampled], axis=1)
@@ -81,7 +81,7 @@ undersampled_data.to_csv('../../dataset/LIC/LIC_CondensedNearestNeighbour.csv', 
 rus = TomekLinks(return_indices=True)
 X_resampled, y_resampled, idx_resampled = rus.fit_sample(X, Y)
 X_resampled = pd.DataFrame(X_resampled)
-X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface']
+X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class']
 y_resampled = pd.DataFrame(y_resampled)
 y_resampled.columns = ['is_code_smell']
 undersampled_data = pd.concat([X_resampled, y_resampled], axis=1)
@@ -95,7 +95,7 @@ undersampled_data.to_csv('../../dataset/LIC/LIC_TomekLinks.csv', index=False)
 rus = InstanceHardnessThreshold(return_indices=True)
 X_resampled, y_resampled, idx_resampled = rus.fit_sample(X, Y)
 X_resampled = pd.DataFrame(X_resampled)
-X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface']
+X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class']
 y_resampled = pd.DataFrame(y_resampled)
 y_resampled.columns = ['is_code_smell']
 undersampled_data = pd.concat([X_resampled, y_resampled], axis=1)
@@ -108,7 +108,7 @@ undersampled_data.to_csv('../../dataset/LIC/LIC_InstanceHardnessThreshold.csv', 
 rus = NearMiss(return_indices=True)
 X_resampled, y_resampled, idx_resampled = rus.fit_sample(X, Y)
 X_resampled = pd.DataFrame(X_resampled)
-X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface']
+X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class']
 y_resampled = pd.DataFrame(y_resampled)
 y_resampled.columns = ['is_code_smell']
 undersampled_data = pd.concat([X_resampled, y_resampled], axis=1)
@@ -122,7 +122,7 @@ undersampled_data.to_csv('../../dataset/LIC/LIC_NearMiss.csv', index=False)
 rus = OneSidedSelection(return_indices=True)
 X_resampled, y_resampled, idx_resampled = rus.fit_sample(X, Y)
 X_resampled = pd.DataFrame(X_resampled)
-X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface']
+X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class']
 y_resampled = pd.DataFrame(y_resampled)
 y_resampled.columns = ['is_code_smell']
 undersampled_data = pd.concat([X_resampled, y_resampled], axis=1)
@@ -135,7 +135,7 @@ undersampled_data.to_csv('../../dataset/LIC/LIC_OneSidedSelection.csv', index=Fa
 rus = ClusterCentroids()
 X_resampled, y_resampled, idx_resampled = rus.fit_sample(X, Y)
 X_resampled = pd.DataFrame(X_resampled)
-X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface']
+X_resampled.columns = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class']
 y_resampled = pd.DataFrame(y_resampled)
 y_resampled.columns = ['is_code_smell']
 undersampled_data = pd.concat([X_resampled, y_resampled], axis=1)

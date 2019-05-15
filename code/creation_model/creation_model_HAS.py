@@ -19,9 +19,9 @@ import pydot
 
 #df = pd.read_csv('../../dataset/HAS/taken/HAS_del.csv')
 
-datasetpath=["../../../../dataset/HAS/taken/HAS_.csv","../../../../dataset/HAS/taken/HAS_RandomUnderSampler.csv"
-    ,"../../../../dataset/HAS/taken/HAS_AllKNN.csv",
-             "../../../../dataset/HAS/taken/HAS_InstanceHardnessThreshold.csv",
+datasetpath=["../../dataset/HAS/taken/HAS_.csv","../../dataset/HAS/taken/HAS_RandomUnderSampler.csv"
+    ,"../../dataset/HAS/taken/HAS_AllKNN.csv",
+             "../../dataset/HAS/taken/HAS_InstanceHardnessThreshold.csv",
              "../../dataset/HAS/taken/HAS_NearMiss.csv",
              "../../dataset/HAS/taken/HAS_OneSidedSelection.csv",
              "../../dataset/HAS/taken/HAS_RandomUnderSampler_default.csv",
@@ -29,7 +29,7 @@ datasetpath=["../../../../dataset/HAS/taken/HAS_.csv","../../../../dataset/HAS/t
           #   ,"../../dataset/HAS/taken/HAS_CondensedNearestNeighbour.csv"
              ]
 
-df = pd.read_csv(datasetpath[3])
+df = pd.read_csv(datasetpath[1])
 idx = np.random.permutation(df.index)
 df.reindex(idx)
 print(df['is_code_smell'].describe())
