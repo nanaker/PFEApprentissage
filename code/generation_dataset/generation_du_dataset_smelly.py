@@ -85,9 +85,10 @@ df['uses_variables'] = 'false'
 df['call_method'] = 'false'
 df['is_interface'] = 'false'
 df['is_local_class'] = 'false'
+df['call_external_method'] = 'false'
 df.rename(columns={'name': 'full_name'},inplace=True)
 print(df.head(3))
-columnsTitles = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class','full_name']
+columnsTitles = ['is_static','is_enum','uses_variables','call_method','is_interface','is_local_class','call_external_method','full_name']
 
 df = df.reindex(columns=columnsTitles)
 print(df.head(3))

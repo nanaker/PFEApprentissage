@@ -19,11 +19,11 @@ import pydot
 
 #df = pd.read_csv('../../dataset/LIC/taken/LIC_del.csv')
 
-datasetpath=["../../dataset/LIC/taken/LIC_.csv","../../dataset/LIC/taken/LIC_RandomUnderSampler.csv"
+datasetpath=["../../dataset/LIC/taken/LIC_new.csv","../../dataset/LIC/taken/LIC_RandomUnderSampler.csv"
     
              ]
 
-df = pd.read_csv(datasetpath[1])
+df = pd.read_csv(datasetpath[0])
 idx = np.random.permutation(df.index)
 df.reindex(idx)
 print(df['is_code_smell'].describe())

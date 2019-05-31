@@ -18,7 +18,8 @@ from sklearn.externals.six import StringIO
 import pydot
 
 ##LIC
-datasetpath=["../../dataset/LIC/taken/LIC_.csv","../../dataset/LIC/taken/LIC_RandomUnderSampler.csv","../../dataset/LIC/taken/LIC_AllKNN.csv","../../dataset/LIC/taken/LIC_InstanceHardnessThreshold.csv","../../dataset/LIC/taken/LIC_NearMiss.csv","../../dataset/LIC/taken/LIC_OneSidedSelection.csv","../../dataset/LIC/taken/LIC_TomekLinks.csv","../../dataset/LIC/taken/LIC_CondensedNearestNeighbour.csv"]
+#datasetpath=["../../dataset/LIC/taken/LIC_.csv","../../dataset/LIC/taken/LIC_RandomUnderSampler.csv","../../dataset/LIC/taken/LIC_AllKNN.csv","../../dataset/LIC/taken/LIC_InstanceHardnessThreshold.csv","../../dataset/LIC/taken/LIC_NearMiss.csv","../../dataset/LIC/taken/LIC_OneSidedSelection.csv","../../dataset/LIC/taken/LIC_TomekLinks.csv","../../dataset/LIC/taken/LIC_CondensedNearestNeighbour.csv"]
+datasetpath=["../../dataset/LIC/taken/LIC_.csv","../../dataset/LIC/taken/LIC_RandomUnderSampler.csv"]
 
 #df = pd.read_csv('../../dataset/LIC/taken/LIC_del.csv')
 #df = pd.read_csv('../../dataset/LIC/taken/LIC_RandomUnderSampler.csv')
