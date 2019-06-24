@@ -1,73 +1,73 @@
-classification_methode,path,validation_methode,F_mesure
-Decision Tree,dataset/HBR/taken/HBR_.csv,Validation_70/30,0.7407407407407406
-Decision Tree,dataset/HBR/taken/HBR_.csv,cross Validation,0.675015479876161
-Decision Tree,dataset/HBR/taken/HBR_RandomUnderSampler.csv,Validation_70/30,0.923076923076923
-Decision Tree,dataset/HBR/taken/HBR_RandomUnderSampler.csv,cross Validation,0.911043956043956
-Decision Tree,dataset/HBR/taken/HBR_AllKNN.csv,Validation_70/30,0.9090909090909091
-Decision Tree,dataset/HBR/taken/HBR_AllKNN.csv,cross Validation,0.9069019607843136
-Decision Tree,dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,Validation_70/30,1.0
-Decision Tree,dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,cross Validation,1.0
-Decision Tree,dataset/HBR/taken/HBR_NearMiss.csv,Validation_70/30,0.7272727272727274
-Decision Tree,dataset/HBR/taken/HBR_NearMiss.csv,cross Validation,0.7855639097744361
-Decision Tree,dataset/HBR/taken/HBR_OneSidedSelection.csv,Validation_70/30,0.7826086956521738
-Decision Tree,dataset/HBR/taken/HBR_OneSidedSelection.csv,cross Validation,0.7958585858585858
-Decision Tree,dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,Validation_70/30,0.9444444444444444
-Decision Tree,dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,cross Validation,0.9426827939413751
-Decision Tree,dataset/HBR/taken/HBR_TomekLinks.csv,Validation_70/30,0.8571428571428571
-Decision Tree,dataset/HBR/taken/HBR_TomekLinks.csv,cross Validation,0.7675288488601181
-Decision Tree,dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,Validation_70/30,0.7857142857142857
-Decision Tree,dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,cross Validation,0.6719568151147098
-Random Forest,dataset/HBR/taken/HBR_.csv,Validation_70/30,0.5333333333333333
-Random Forest,dataset/HBR/taken/HBR_.csv,cross Validation,0.6019013666072489
-Random Forest,dataset/HBR/taken/HBR_RandomUnderSampler.csv,Validation_70/30,0.9714285714285714
-Random Forest,dataset/HBR/taken/HBR_RandomUnderSampler.csv,cross Validation,0.9567805383022774
-Random Forest,dataset/HBR/taken/HBR_AllKNN.csv,Validation_70/30,0.9142857142857143
-Random Forest,dataset/HBR/taken/HBR_AllKNN.csv,cross Validation,0.856217750257998
-Random Forest,dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,Validation_70/30,1.0
-Random Forest,dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,cross Validation,1.0
-Random Forest,dataset/HBR/taken/HBR_NearMiss.csv,Validation_70/30,0.7857142857142858
-Random Forest,dataset/HBR/taken/HBR_NearMiss.csv,cross Validation,0.8215479876160989
-Random Forest,dataset/HBR/taken/HBR_OneSidedSelection.csv,Validation_70/30,0.7857142857142857
-Random Forest,dataset/HBR/taken/HBR_OneSidedSelection.csv,cross Validation,0.7710925306577481
-Random Forest,dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,Validation_70/30,0.9411764705882353
-Random Forest,dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,cross Validation,0.9684472049689441
-Random Forest,dataset/HBR/taken/HBR_TomekLinks.csv,Validation_70/30,0.7692307692307692
-Random Forest,dataset/HBR/taken/HBR_TomekLinks.csv,cross Validation,0.6544360902255638
-Random Forest,dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,Validation_70/30,0.8
-Random Forest,dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,cross Validation,0.8439213976971415
-Naive Bayes,dataset/HBR/taken/HBR_.csv,Validation_70/30,0.4905660377358491
-Naive Bayes,dataset/HBR/taken/HBR_.csv,cross Validation,0.5487966499731206
-Naive Bayes,dataset/HBR/taken/HBR_RandomUnderSampler.csv,Validation_70/30,0.8666666666666666
-Naive Bayes,dataset/HBR/taken/HBR_RandomUnderSampler.csv,cross Validation,0.9295959595959596
-Naive Bayes,dataset/HBR/taken/HBR_AllKNN.csv,Validation_70/30,0.6486486486486487
-Naive Bayes,dataset/HBR/taken/HBR_AllKNN.csv,cross Validation,0.6208042768042767
-Naive Bayes,dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,Validation_70/30,0.7368421052631579
-Naive Bayes,dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,cross Validation,0.736727330779055
-Naive Bayes,dataset/HBR/taken/HBR_NearMiss.csv,Validation_70/30,0.8275862068965517
-Naive Bayes,dataset/HBR/taken/HBR_NearMiss.csv,cross Validation,0.8330358504958048
-Naive Bayes,dataset/HBR/taken/HBR_OneSidedSelection.csv,Validation_70/30,0.72
-Naive Bayes,dataset/HBR/taken/HBR_OneSidedSelection.csv,cross Validation,0.8328672359632112
-Naive Bayes,dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,Validation_70/30,0.9444444444444444
-Naive Bayes,dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,cross Validation,0.910204991087344
-Naive Bayes,dataset/HBR/taken/HBR_TomekLinks.csv,Validation_70/30,0.5925925925925926
-Naive Bayes,dataset/HBR/taken/HBR_TomekLinks.csv,cross Validation,0.5658249158249158
-Naive Bayes,dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,Validation_70/30,0.8750000000000001
-Naive Bayes,dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,cross Validation,0.838659147869674
-SVM,dataset/HBR/taken/HBR_.csv,Validation_70/30,0.5555555555555556
-SVM,dataset/HBR/taken/HBR_.csv,cross Validation,0.473133971291866
-SVM,dataset/HBR/taken/HBR_RandomUnderSampler.csv,Validation_70/30,0.9285714285714286
-SVM,dataset/HBR/taken/HBR_RandomUnderSampler.csv,cross Validation,0.935204991087344
-SVM,dataset/HBR/taken/HBR_AllKNN.csv,Validation_70/30,0.888888888888889
-SVM,dataset/HBR/taken/HBR_AllKNN.csv,cross Validation,0.8824575163398694
-SVM,dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,Validation_70/30,0.896551724137931
-SVM,dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,cross Validation,0.911140350877193
-SVM,dataset/HBR/taken/HBR_NearMiss.csv,Validation_70/30,0.5714285714285715
-SVM,dataset/HBR/taken/HBR_NearMiss.csv,cross Validation,0.625463458110517
-SVM,dataset/HBR/taken/HBR_OneSidedSelection.csv,Validation_70/30,0.5882352941176471
-SVM,dataset/HBR/taken/HBR_OneSidedSelection.csv,cross Validation,0.544093567251462
-SVM,dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,Validation_70/30,0.9696969696969697
-SVM,dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,cross Validation,0.9098613463830855
-SVM,dataset/HBR/taken/HBR_TomekLinks.csv,Validation_70/30,0.7407407407407408
-SVM,dataset/HBR/taken/HBR_TomekLinks.csv,cross Validation,0.4643711843711843
-SVM,dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,Validation_70/30,0.7200000000000001
-SVM,dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,cross Validation,0.455222816399287
+classification_methode,path,validation_methode,F_mesure,precision,rappel
+Decision Tree,../../dataset/HBR/taken/HBR_.csv,Validation_70/30,0.6153846153846153,0.6666666666666666,0.5714285714285714
+Decision Tree,../../dataset/HBR/taken/HBR_.csv,cross Validation,0.6970175438596491,0.7196969696969696,0.7241208791208791
+Decision Tree,../../dataset/HBR/taken/HBR_RandomUnderSampler.csv,Validation_70/30,0.9090909090909091,0.9090909090909091,0.9090909090909091
+Decision Tree,../../dataset/HBR/taken/HBR_RandomUnderSampler.csv,cross Validation,0.911043956043956,0.9349999999999999,0.8900649350649351
+Decision Tree,../../dataset/HBR/taken/HBR_AllKNN.csv,Validation_70/30,0.7999999999999999,0.75,0.8571428571428571
+Decision Tree,../../dataset/HBR/taken/HBR_AllKNN.csv,cross Validation,0.9069019607843136,0.910064935064935,0.9123931623931625
+Decision Tree,../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,Validation_70/30,1.0,1.0,1.0
+Decision Tree,../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,cross Validation,1.0,1.0,1.0
+Decision Tree,../../dataset/HBR/taken/HBR_NearMiss.csv,Validation_70/30,0.7407407407407406,0.625,0.9090909090909091
+Decision Tree,../../dataset/HBR/taken/HBR_NearMiss.csv,cross Validation,0.7993037930795367,0.7873015873015874,0.8182467532467532
+Decision Tree,../../dataset/HBR/taken/HBR_OneSidedSelection.csv,Validation_70/30,0.7368421052631577,0.7,0.7777777777777778
+Decision Tree,../../dataset/HBR/taken/HBR_OneSidedSelection.csv,cross Validation,0.817390749601276,0.7861111111111111,0.8674725274725275
+Decision Tree,../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,Validation_70/30,0.9285714285714286,1.0,0.8666666666666667
+Decision Tree,../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,cross Validation,0.9426827939413751,0.9365800865800866,0.9514285714285714
+Decision Tree,../../dataset/HBR/taken/HBR_TomekLinks.csv,Validation_70/30,0.7894736842105262,0.8333333333333334,0.75
+Decision Tree,../../dataset/HBR/taken/HBR_TomekLinks.csv,cross Validation,0.7806007442849549,0.8307070707070707,0.7685714285714285
+Decision Tree,../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,Validation_70/30,0.7826086956521738,0.9,0.6923076923076923
+Decision Tree,../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,cross Validation,0.7119568151147099,0.76,0.7024242424242424
+Random Forest,../../dataset/HBR/taken/HBR_.csv,Validation_70/30,0.5806451612903226,0.6428571428571429,0.5294117647058824
+Random Forest,../../dataset/HBR/taken/HBR_.csv,cross Validation,0.6019013666072489,0.7607142857142857,0.5218681318681319
+Random Forest,../../dataset/HBR/taken/HBR_RandomUnderSampler.csv,Validation_70/30,0.9411764705882353,0.8888888888888888,1.0
+Random Forest,../../dataset/HBR/taken/HBR_RandomUnderSampler.csv,cross Validation,0.9567805383022774,0.9401515151515152,0.975
+Random Forest,../../dataset/HBR/taken/HBR_AllKNN.csv,Validation_70/30,0.8333333333333333,0.7692307692307693,0.9090909090909091
+Random Forest,../../dataset/HBR/taken/HBR_AllKNN.csv,cross Validation,0.856217750257998,0.9136363636363637,0.8450854700854702
+Random Forest,../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,Validation_70/30,1.0,1.0,1.0
+Random Forest,../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,cross Validation,1.0,1.0,1.0
+Random Forest,../../dataset/HBR/taken/HBR_NearMiss.csv,Validation_70/30,0.8666666666666666,0.8125,0.9285714285714286
+Random Forest,../../dataset/HBR/taken/HBR_NearMiss.csv,cross Validation,0.8215479876160989,0.8447619047619048,0.8154545454545454
+Random Forest,../../dataset/HBR/taken/HBR_OneSidedSelection.csv,Validation_70/30,0.8571428571428571,1.0,0.75
+Random Forest,../../dataset/HBR/taken/HBR_OneSidedSelection.csv,cross Validation,0.7710925306577481,0.7674242424242423,0.8452747252747252
+Random Forest,../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,Validation_70/30,0.9411764705882353,0.8888888888888888,1.0
+Random Forest,../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,cross Validation,0.9684472049689441,0.9401515151515152,1.0
+Random Forest,../../dataset/HBR/taken/HBR_TomekLinks.csv,Validation_70/30,0.7407407407407406,0.9090909090909091,0.625
+Random Forest,../../dataset/HBR/taken/HBR_TomekLinks.csv,cross Validation,0.6544360902255638,0.8298412698412699,0.5757142857142858
+Random Forest,../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,Validation_70/30,0.9032258064516129,0.8235294117647058,1.0
+Random Forest,../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,cross Validation,0.8439213976971415,0.7539393939393939,0.9818181818181818
+Naive Bayes,../../dataset/HBR/taken/HBR_.csv,Validation_70/30,0.43333333333333335,0.2765957446808511,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_.csv,cross Validation,0.5487966499731206,0.37971577847439913,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_RandomUnderSampler.csv,Validation_70/30,0.9142857142857143,0.8421052631578947,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_RandomUnderSampler.csv,cross Validation,0.9295959595959596,0.870897435897436,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_AllKNN.csv,Validation_70/30,0.7083333333333333,0.5483870967741935,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_AllKNN.csv,cross Validation,0.6208042768042767,0.45592105263157895,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,Validation_70/30,0.7843137254901961,0.6451612903225806,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,cross Validation,0.736727330779055,0.5940080971659919,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_NearMiss.csv,Validation_70/30,0.888888888888889,0.8,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_NearMiss.csv,cross Validation,0.8330358504958048,0.7185314685314685,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_OneSidedSelection.csv,Validation_70/30,0.8750000000000001,0.7777777777777778,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_OneSidedSelection.csv,cross Validation,0.8328672359632112,0.7325757575757577,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,Validation_70/30,0.888888888888889,0.8,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,cross Validation,0.910204991087344,0.8358974358974359,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_TomekLinks.csv,Validation_70/30,0.6363636363636364,0.4666666666666667,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_TomekLinks.csv,cross Validation,0.5658249158249158,0.39664279624893434,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,Validation_70/30,0.8484848484848484,0.7368421052631579,1.0
+Naive Bayes,../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,cross Validation,0.838659147869674,0.7374125874125874,1.0
+SVM,../../dataset/HBR/taken/HBR_.csv,Validation_70/30,0.45454545454545453,0.8333333333333334,0.3125
+SVM,../../dataset/HBR/taken/HBR_.csv,cross Validation,0.473133971291866,0.75,0.353021978021978
+SVM,../../dataset/HBR/taken/HBR_RandomUnderSampler.csv,Validation_70/30,0.8275862068965517,0.9230769230769231,0.75
+SVM,../../dataset/HBR/taken/HBR_RandomUnderSampler.csv,cross Validation,0.935204991087344,0.8803418803418804,1.0
+SVM,../../dataset/HBR/taken/HBR_AllKNN.csv,Validation_70/30,0.8947368421052632,0.9444444444444444,0.85
+SVM,../../dataset/HBR/taken/HBR_AllKNN.csv,cross Validation,0.8824575163398694,0.9019841269841269,0.8679487179487179
+SVM,../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,Validation_70/30,0.8799999999999999,0.8461538461538461,0.9166666666666666
+SVM,../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv,cross Validation,0.911140350877193,0.926984126984127,0.905
+SVM,../../dataset/HBR/taken/HBR_NearMiss.csv,Validation_70/30,0.5833333333333334,0.7777777777777778,0.4666666666666667
+SVM,../../dataset/HBR/taken/HBR_NearMiss.csv,cross Validation,0.625463458110517,0.96,0.4716233766233766
+SVM,../../dataset/HBR/taken/HBR_OneSidedSelection.csv,Validation_70/30,0.5,1.0,0.3333333333333333
+SVM,../../dataset/HBR/taken/HBR_OneSidedSelection.csv,cross Validation,0.544093567251462,0.86,0.40087912087912086
+SVM,../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,Validation_70/30,0.9333333333333333,0.9333333333333333,0.9333333333333333
+SVM,../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv,cross Validation,0.9098613463830855,0.8501515151515152,0.9800000000000001
+SVM,../../dataset/HBR/taken/HBR_TomekLinks.csv,Validation_70/30,0.3333333333333333,0.5,0.25
+SVM,../../dataset/HBR/taken/HBR_TomekLinks.csv,cross Validation,0.4643711843711843,0.7714285714285715,0.35
+SVM,../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,Validation_70/30,0.4210526315789474,0.5714285714285714,0.3333333333333333
+SVM,../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv,cross Validation,0.455222816399287,0.7199346405228757,0.4862121212121212

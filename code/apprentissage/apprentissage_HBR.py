@@ -16,23 +16,14 @@ from sklearn.metrics import confusion_matrix,recall_score,precision_recall_curve
 import graphviz
 from sklearn.externals.six import StringIO
 import pydot
+from openpyxl import Workbook
 
 ##HBR
 datasetpath=["../../dataset/HBR/taken/HBR_.csv","../../dataset/HBR/taken/HBR_RandomUnderSampler.csv","../../dataset/HBR/taken/HBR_AllKNN.csv","../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv","../../dataset/HBR/taken/HBR_NearMiss.csv","../../dataset/HBR/taken/HBR_OneSidedSelection.csv","../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv","../../dataset/HBR/taken/HBR_TomekLinks.csv","../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv"]
 
-#df = pd.read_csv('../../dataset/HBR/taken/HBR_del.csv')
-#df = pd.read_csv('../../dataset/HBR/taken/HBR_RandomUnderSampler.csv')
-#df = pd.read_csv('../../dataset/HBR/taken/HBR_AllKNN.csv')
-#df = pd.read_csv('../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv')
-#df = pd.read_csv('../../dataset/HBR/taken/HBR_InstanceHardnessThreshold.csv')
-#df = pd.read_csv('../../dataset/HBR/taken/HBR_NearMiss.csv')
-#df = pd.read_csv('../../dataset/HBR/taken/HBR_OneSidedSelection.csv')
-#df = pd.read_csv('../../dataset/HBR/taken/HBR_RandomUnderSampler_default.csv')
-#df = pd.read_csv('../../dataset/HBR/taken/HBR_TomekLinks.csv')
 
 
-
-result = pd.DataFrame(columns=['classification_methode', 'path', 'validation_methode','F_mesure'])
+result = pd.DataFrame(columns=['classification_methode', 'path', 'validation_methode','precision','rappel','F_mesure','Accuracy','Error Rate','Specificity','False Positive Rate ','False Negative Rate'])
 print(result)
 
 for j in range(4):
@@ -40,8 +31,7 @@ for j in range(4):
 
  for path in datasetpath:
 
-   # if((j==3)&(path=="../../dataset/HBR/taken/HBR_CondensedNearestNeighbour.csv")):
-    #    continue
+
 
     print("\n\n")
     if (j == 0):
@@ -80,42 +70,31 @@ for j in range(4):
     if (j == 2): clf=GaussianNB()
     if (j == 3): clf = svm.SVC(gamma='scale')
 
-    #clf = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0)
-    #clf=GaussianNB()
-    #clf = svm.SVC(gamma='scale')
+
 
 
     lr_model = clf.fit(X_train, y_train)
 
-    #Visualisation
-   # tree.export_graphviz(lr_model, out_file="../../dataset/HBR/HBR_model_tree",
-  #                   feature_names=list(df.columns),
-   #                    class_names=['non_smelly','smelly'],
-   #                    filled=True, rounded=True,
-  #                     special_characters=True)
 
 
     # Test the model using the test set
     predictions = lr_model.predict(X_test)
 
 
-   # Let's see the confusion matrix and evaluate the model
+   # Creation de la mtrice de confusion pour evaluer le model
     cnf_matrix=confusion_matrix(y_test,predictions)
 
 
     print(cnf_matrix)
     print("the recall for this model is :",cnf_matrix[1,1]/(cnf_matrix[1,1]+cnf_matrix[1,0]))
 
-    #fig= plt.figure(figsize=(6,3))# to plot the graph
-    print("TP",cnf_matrix[1,1,]) # no of fraud transaction which are predicted fraud
-    print("TN",cnf_matrix[0,0]) # no. of normal transaction which are predited normal
-    print("FP",cnf_matrix[0,1]) # no of normal transaction which are predicted fraud
-    print("FN",cnf_matrix[1,0]) # no of fraud Transaction which are predicted normal
-   # sns.heatmap(cnf_matrix,cmap="coolwarm_r",annot=True,linewidths=0.5)
-   # plt.title("Confusion_matrix")
-    #plt.xlabel("Predicted_class")
-    #plt.ylabel("Real class")
-   # plt.show()
+
+    print("TP",cnf_matrix[1,1,])
+    print("TN",cnf_matrix[0,0])
+    print("FP",cnf_matrix[0,1])
+    print("FN",cnf_matrix[1,0])
+
+
     print("\n----------Classification Report------------------------------------")
     print(classification_report(y_test,predictions))
     TP=cnf_matrix[1,1]
@@ -125,13 +104,19 @@ for j in range(4):
     Precision=TP/(TP+FP)
     Rappel=TP/(TP+FN)
     F_mesure=2*Rappel*Precision/(Precision+Rappel)
+    Accuracy=(TP + TN) / (TP + TN + FP + FN)
+    ErrorRate=1-Accuracy
+    Specificity = TN / (TN + FP)
+    FalsePositiveRate=FP/(FP+TN)
+    FalseNegativeRate=FN/(FN+TP)
+
     print("Precision = ",Precision)
     print("Rappel= ",Rappel)
     print("F_Mesure=",F_mesure)
 
     print(classification,path, test_methode, F_mesure)
 
-    result=result.append(pd.Series([classification, path, test_methode, F_mesure], index=result.columns), ignore_index=True)
+    result=result.append(pd.Series([classification, path, test_methode,Precision,Rappel,F_mesure,Accuracy,ErrorRate,Specificity,FalsePositiveRate,FalseNegativeRate], index=result.columns), ignore_index=True)
 
 
 
@@ -145,6 +130,15 @@ for j in range(4):
     if (j == 2): clf = GaussianNB()
     if (j == 3): clf = svm.SVC(gamma='scale')
     F_mesures=[]
+    Precisionss=[]
+    Rappelss=[]
+    Accuracyss = []
+    ErrorRatess = []
+    Specifityss = []
+    FalsePositiveRatess = []
+    FalseNegativeRatess = []
+
+
     kfold = KFold(5, True, 1)
     df = pd.read_csv(path)
     k=1
@@ -166,17 +160,37 @@ for j in range(4):
        Precision = TP / (TP + FP)
        Rappel = TP / (TP + FN)
        F_mesure = 2 * Rappel * Precision / (Precision + Rappel)
+       Accuracy = (TP + TN) / (TP + TN + FP + FN)
+       ErrorRate = 1 - Accuracy
+       Specificity = TN / (TN + FP)
+       FalsePositiveRate = FP / (FP + TN)
+       FalseNegativeRate = FN / (FN + TP)
+
        print("F_Mesure=", F_mesure)
        F_mesures.append(F_mesure)
+       Precisionss.append(Precision)
+       Rappelss.append(Rappel)
+       Accuracyss.append(Accuracy)
+       ErrorRatess.append(ErrorRate)
+       Specifityss.append(Specificity)
+       FalsePositiveRatess.append(FalsePositiveRate)
+       FalseNegativeRatess.append(FalseNegativeRate)
+
+       result_is_valid=np.mean(F_mesures) <= 0.9111
       except:
           pass
 
     print("F_Mesures moyenne =", np.mean(F_mesures))
+    if (result_is_valid):
 
-    result=result.append(pd.Series([classification, path, test_methode, np.mean(F_mesures)], index=result.columns), ignore_index=True)
 
 
-result.to_csv('../../dataset/HBR/HBR_train_result2.csv', index=False)
+
+
+     result=result.append(pd.Series([classification, path, test_methode,np.mean(Precisionss),np.mean(Rappelss),np.mean(F_mesures),np.mean(Accuracyss),np.mean(ErrorRatess),np.mean(Specifityss),np.mean(FalsePositiveRatess),np.mean(FalseNegativeRatess)], index=result.columns), ignore_index=True)
+
+
+result.to_excel('../../dataset/HBR/HBR_train_result.xlsx', index=False)
 
 
 

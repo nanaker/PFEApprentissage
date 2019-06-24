@@ -12,6 +12,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn import svm
 
+from openpyxl import Workbook
 from sklearn.metrics import confusion_matrix,recall_score,precision_recall_curve,auc,roc_curve,roc_auc_score,classification_report
 import graphviz
 from sklearn.externals.six import StringIO
@@ -40,7 +41,7 @@ for j in range(4):
 
  for path in datasetpath:
 
-    if((j==3)&(path=="../../dataset/HAS/taken/HAS_CondensedNearestNeighbour.csv")):
+    if((j==3)&(path=="../../dataset/NLMR/taken/NLMR_CondensedNearestNeighbour.csv")):
      continue
 
     print("\n\n")
@@ -179,7 +180,7 @@ for j in range(4):
     result=result.append(pd.Series([classification, path, test_methode, np.mean(F_mesures)], index=result.columns), ignore_index=True)
 
 
-result.to_csv('../../dataset/NLMR/NLMR_train_result2.csv', index=False)
+result.to_excel('../../dataset/NLMR/NLMR_train_result.xlsx', index=False)
 
 
 

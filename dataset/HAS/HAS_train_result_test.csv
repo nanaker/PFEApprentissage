@@ -1,0 +1,2 @@
+classification_methode,path,precision,rappel,F_mesure,Accuracy,Error Rate,Specificity,False Positive Rate ,False Negative Rate
+Decision Tree,../../dataset/HAS/taken/HAS_NearMiss.csv,0.8884848484848484,1.0,0.9395458342826764,0.9323809523809524,0.0676190476190476,0.8473015873015873,0.1526984126984127,0.0

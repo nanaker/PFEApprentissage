@@ -12,13 +12,14 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn import svm
 
+from openpyxl import Workbook
 from sklearn.metrics import confusion_matrix,recall_score,precision_recall_curve,auc,roc_curve,roc_auc_score,classification_report
 import graphviz
 from sklearn.externals.six import StringIO
 import pydot
 
 ##MIM
-datasetpath=["../../dataset/MIM/taken/MIM_.csv","../../dataset/MIM/taken/MIM_RandomUnderSampler.csv","../../dataset/MIM/taken/MIM_AllKNN.csv","../../dataset/MIM/taken/MIM_InstanceHardnessThreshold.csv","../../dataset/MIM/taken/MIM_NearMiss.csv","../../dataset/MIM/taken/MIM_OneSidedSelection.csv","../../dataset/MIM/taken/MIM_TomekLinks.csv"]
+datasetpath=["../../dataset/MIM/taken/MIM_.csv","../../dataset/MIM/taken/MIM_RandomUnderSampler.csv","../../dataset/MIM/taken/MIM_AllKNN.csv","../../dataset/MIM/taken/MIM_InstanceHardnessThreshold.csv","../../dataset/MIM/taken/MIM_OneSidedSelection.csv","../../dataset/MIM/taken/MIM_TomekLinks.csv"]
 
 #df = pd.read_csv('../../dataset/MIM/taken/MIM_del.csv')
 #df = pd.read_csv('../../dataset/MIM/taken/MIM_RandomUnderSampler.csv')
@@ -178,7 +179,7 @@ for j in range(4):
     result=result.append(pd.Series([classification, path, test_methode, np.mean(F_mesures)], index=result.columns), ignore_index=True)
 
 
-result.to_csv('../../dataset/MIM/MIM_train_result2.csv', index=False)
+result.to_excel('../../dataset/MIM/MIM_train_result2.xlsx', index=False)
 
 
 

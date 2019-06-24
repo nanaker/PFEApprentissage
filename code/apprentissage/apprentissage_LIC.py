@@ -14,6 +14,8 @@ from sklearn import svm
 
 from sklearn.metrics import confusion_matrix,recall_score,precision_recall_curve,auc,roc_curve,roc_auc_score,classification_report
 import graphviz
+
+from openpyxl import Workbook
 from sklearn.externals.six import StringIO
 import pydot
 
@@ -33,7 +35,7 @@ datasetpath=["../../dataset/LIC/taken/LIC_.csv","../../dataset/LIC/taken/LIC_Ran
 
 
 
-result = pd.DataFrame(columns=['classification_methode', 'path', 'validation_methode','F_mesure'])
+result = pd.DataFrame(columns=['classification_methode', 'path', 'validation_methode','F_mesure','precision','rappel'])
 print(result)
 
 for j in range(4):
@@ -134,7 +136,7 @@ for j in range(4):
 
     print(classification,path, test_methode, F_mesure)
 
-    result=result.append(pd.Series([classification, path, test_methode, F_mesure], index=result.columns), ignore_index=True)
+    result=result.append(pd.Series([classification, path, test_methode, F_mesure,Precision,Rappel], index=result.columns), ignore_index=True)
 
 
 
@@ -148,6 +150,8 @@ for j in range(4):
     if (j == 2): clf = GaussianNB()
     if (j == 3): clf = svm.SVC(gamma='scale')
     F_mesures=[]
+    Precisionss = []
+    Rappelss = []
     kfold = KFold(5, True, 1)
     df = pd.read_csv(path)
     k=1
@@ -171,15 +175,17 @@ for j in range(4):
        F_mesure = 2 * Rappel * Precision / (Precision + Rappel)
        print("F_Mesure=", F_mesure)
        F_mesures.append(F_mesure)
+       Precisionss.append(Precision)
+       Rappelss.append(Rappel)
       except:
           pass
 
     print("F_Mesures moyenne =", np.mean(F_mesures))
 
-    result=result.append(pd.Series([classification, path, test_methode, np.mean(F_mesures)], index=result.columns), ignore_index=True)
+    result=result.append(pd.Series([classification, path, test_methode, np.mean(F_mesures),np.mean(Precisionss),np.mean(Rappelss)], index=result.columns), ignore_index=True)
 
 
-result.to_csv('../../dataset/LIC/LIC_train_result2.csv', index=False)
+result.to_excel('../../dataset/LIC/LIC_train_result.xlsx', index=False)
 
 
 
